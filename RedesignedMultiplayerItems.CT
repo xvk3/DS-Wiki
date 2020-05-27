@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="26">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>1337050092</ID>
+      <Description>"hollow use redorb - redsign"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+aobscan(reo,15 00 00 00 FF FF FF FF B8 2E 31 01)
+registersymbol(reo)
+
+reo+26:
+db FF FF 63
+
+aobscan(res,14 00 00 00 FF FF FF FF 00 00 00 00 FF FF FF FF D1 07 00 00)
+registersymbol(res)
+
+res+26:
+db FF FF 63
+
+
+[DISABLE]
+
+unregistersymbol(reo)
+
+unregistersymbol(res)
+</AssemblerScript>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+</CheatTable>
