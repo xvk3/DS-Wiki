@@ -5,6 +5,7 @@
 - [ ] Add more tips to /dsr/tips.html
 - [ ] Add PvP videos to /dsr/vids.html
 - [ ] Add PvP videos to /ptde/vids.html (Create this)
+- [ ] Create a homepage with a site map
 
 ## Main Files
 
