@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="31">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>69420</ID>
+      <Description>"UI Scale (default range is 65 -> 100, unlocked to 0 -> 255)"</Description>
+      <LastState Value="1" RealAddress="0BBFC421"/>
+      <VariableType>Byte</VariableType>
+      <AssemblerScript>[ENABLE]
+autoAssemble([[
+aobscanmodule(GetB,DarkSoulsRemastered.exe,48 8B 05 xx xx xx xx 45 33 ED 48 8B F1 48 85 C0)
+registersymbol(GetB)
+]])
+local addr = getAddress("GetB")
+addr = addr + readInteger(addr + 3) + 7
+unregisterSymbol("BaseB")
+registerSymbol("BaseB", addr, true)
+[DISABLE]
+unregisterSymbol(BaseB)
+      </AssemblerScript>
+      <Address>BaseB</Address>
+      <Offsets>
+        <Offset>12</Offset>
+        <Offset>58</Offset>
+      </Offsets>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+</CheatTable>

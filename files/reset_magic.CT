@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="34">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>1337050822</ID>
+      <Description>"reset_magic"</Description>
+      <Options moHideChildren="1"/>
+      <LastState Value="" Activated="1" RealAddress="00000000"/>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>1337050946</ID>
+          <Description>"attunement_slot_01"</Description>
+          <ShowAsSigned>1</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>BaseB</Address>
+          <Offsets>
+            <Offset>18</Offset>
+            <Offset>418</Offset>
+            <Offset>10</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>1337050947</ID>
+          <Description>"reset_magic_quantity"</Description>
+          <LastState/>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+{$lua}
+local att_slot=getAddressList().getMemoryRecordByDescription("attunement_slot_01")
+local att_slot_addr=getAddress(att_slot.CurrentAddress)
+local spells = {
+    [-1] = 0,
+    [3000] = 90,
+    [3010] = 60,
+    [3020] = 36,
+    [3030] = 24,
+    [3040] = 30,
+    [3050] = 30,
+    [3060] = 12,
+    [3070] = 12,
+    [3100] = 15,
+    [3110] = 9,
+    [3120] = 9,
+    [3300] = 15,
+    [3310] = 9,
+    [3400] = 9,
+    [3410] = 9,
+    [3500] = 9,
+    [3510] = 18,
+    [3520] = 60,
+    [3530] = 3,
+    [3540] = 30,
+    [3550] = 33,
+    [3600] = 12,
+    [3610] = 12,
+    [3700] = 60,
+    [3710] = 36,
+    [3720] = 18,
+    [3730] = 6,
+    [3740] = 9,
+    [4000] = 24,
+    [4010] = 18,
+    [4020] = 12,
+    [4030] = 60,
+    [4040] = 60,
+    [4050] = 240,
+    [4060] = 240,
+    [4100] = 48,
+    [4110] = 24,
+    [4200] = 9,
+    [4210] = 3,
+    [4220] = 6,
+    [4300] = 9,
+    [4310] = 9,
+    [4360] = 21,
+    [4400] = 3,
+    [4500] = 12,
+    [4510] = 60,
+    [4520] = 240,
+    [4530] = 24,
+    [5000] = 15,
+    [5010] = 9,
+    [5020] = 3,
+    [5030] = 9,
+    [5040] = 6,
+    [5050] = 6,
+    [5100] = 120,
+    [5110] = 120,
+    [5200] = 3,
+    [5210] = 3,
+    [5300] = 63,
+    [5310] = 9,
+    [5320] = 18,
+    [5400] = 15,
+    [5500] = 30,
+    [5510] = 30,
+    [5520] = 15,
+    [5600] = 12,
+    [5610] = 6,
+    [5700] = 12,
+--    [5710]
+    [5800] = 15,
+    [5810] = 6,
+    [5900] = 3,
+    [5910] = 3
+}
+
+
+for i = 0, 11, 1
+do
+    local quantity = spells[readInteger(att_slot_addr)]
+    att_slot_addr = att_slot_addr + 4
+    writeInteger(att_slot_addr, quantity)
+    att_slot_addr = att_slot_addr + 4
+end
+
+function disableSelf(sender)
+  sender.destroy()
+  local addr=getAddressList().getMemoryRecordByDescription("reset_magic_quantity")
+  memoryrecord_unfreeze(addr)
+end
+
+local t=createTimer(nil)
+t.OnTimer=disableSelf
+t.Interval=400
+t.Enabled=true
+
+[DISABLE]
+{$lua}
+
+
+
+</AssemblerScript>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols>
+  </UserdefinedSymbols>
+</CheatTable>
