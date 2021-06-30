@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="24">
+    <Forms>
+        <UDF1 Class="TCEForm" Encoding="Ascii85">jaJKY,^P6hk#duI#ATIJ6=;JNDOZZLh8U6{B@9e8hHtVgT9iOZW$zlm#Q/gl4R/#/9/8$RNBEQS1Nne[iBC6%GnS*?%moSd/J?!4ef7e/Uhneaczx.e.OJPJ;h_ly/Bi,TId[Zyxg{1y92IWy;xIQj-7Nmx]^Zqzxnl93w=5fZ/*}g-mg,#2T*TVw,GK3bQeE47[meW7SjW^l+X]Y.JTL3AD(KK$dMb7k#Y?YHjmvt3uLIe+QrF]4S*J=q9pKFJz3%?T!#z++oGZQ5^pq,a@xmhs?KL562a)usb/KZzUe.]++clMAx5PGm/mXVDD}ffiEWP4N!dJtYc:G=Q926]a9n}Y4qDz?5res1Fg{!/xmJe^fbaqGd#Mat^yl$@3+M/sK4K;/0)1OjFGEUkNRgjgeYx8[SjWn[%aX*LT#uB=UiX!o7=fX^2,W}zq;vwDhbk0ptTBif-h-*?-3NP!7O6V;:Tf1ycXE$I,.=Ha6x_Sv[!lGmAd4S,:yibEy,/BGis%q:fO#(!ivzb6#8W*/x1}LQkCavR*z^7iU5[l,bL5-}S;eJ?;#-la-,7jYU[z[;c,?VuF[P6?Bk;k2gC6deTiofh)2TriD@o-81Nby*UBvw_aaIUdC!)r35ku8Sy[#*jLKHb;Nx3)TVev)FGPAXc3.1B2Ut!3(T/vFLWAAHcRU[/=;jsC9KhQ+@g?WmGOk4v1_huG_BNZnO?oM?d^^M}a-rdK2$=PZx@Yx?HbEFBc{(b(D}r9(Ul5u485i-v3RX;BGXw%=RIj+vNCIj!g,orFU$T$7tLFyC1Q;J94wuJwcUJ_SlPjzFJQG6pmp$]KAkY?%C_hH0d_/^%?seFm.Z(:bq0rJ#?VXKnF6;P%Jd!=O:5^oN14=KIoUH+)({rb/V23Bjzam[$@uD_AM)X@@Ehq+v#P9dz0arqYF!Mv(I$LE:vS+R=]Z?!52G0i_OntFo5)I?W1xkpdTR(G^hAPeMuCR^pwQj}iABS?aMw4PgKX?+bIVP?t,)6g3=yIkH}KgTl}ZG6Iz@:Tr[]1Yve}SNsD:[[rQGs90Vz#Y!WSa57[CqQ:Q$fmW:O2GpSKdhk6jjddh.^O(4h,Hj7-NYsS5YEVw$R;I0#g?_cu3[2P4.##qq%ACX#4;ll,JcPLo$W1TXG6dSpE^weTK82K*S,@xNEQmsH51e@[5bjoGFo)7fR%]yrbrdo@t_Nj5f1hiRl^Ul!KKVR]u2.2AuMz{rS8RS%,Glih4Qeqgn;}ZX2l]+/:tY@q-]Sl=XRLO]/39r1r3vD.XDeEXA(mGGi0dBq6tJt(]:,LO@#Y;C1*Tk,R4{#n0aGCp?O7c(1Qw5ef=c0^j);-U4Tzoid,2V]54n!}Yn0M@l_)D@J^C9K*/tOT-TEqtbsxC2%PtNFj%trur_gaSvi2:@W^JdIU+%)2yAZSfoERzsA?U9D$F@,HhtcrSo[59Op]jWL7B]Fj;fh#9rv(DDA1G.Yb1:U-mF2]I,o5!FzSMd2jKqUIOclQLJ!}ZatiE4ZhObMMPok^[EfQY/^jD{g%bW1-hb;QT71z!vmGyuB@?}F)L8WR!iSlj4N#wAsCu6j6j;K1hxn#wDqyl6135*x*@L[;c?}yw)VF5n!RfS4W)hos]%GL^vX6i6iyZN.nNWLj8itd:DL65QMMW)GR5b1YA1^/j[uxsg(;}23y7R,ux$EK@}@?-;@1hMeV#7{R-^H[}4+HX1.r4JHD2kD=P@zsnu-^hdD-p)4JowmFW*aB[bI?}_O+Pc?Jt*[E1D$_!{K3(uFsr}dU4{(AHfvWUl;*!.{r_aOi:jEou)J*$!=mCEgFjFKCitLcsycrw$bPF-ps]YRY9umV2!45M#HrA_vY@.gT%/QohJ${0Vc-UKhg,niDHMw(*PBA3azBG2{uC.F%uclP0WjwWB[y@xYZ#iZa][8-g?7@7JKgYAh6$=H5^0a</UDF1>
+    </Forms>
+    <CheatEntries>
+        <CheatEntry>
+            <ID>91147</ID>
+            <Description>"Open"</Description>
+            <Options moHideChildren="1"/>
+            <LastState Activated="1"/>
+            <VariableType>Auto Assembler Script</VariableType>
+            <AssemblerScript>
+      
+[ENABLE]
+
+{$lua}
+if syntaxcheck then return end
+
+openProcess("DarkSoulsRemastered.exe")
+
+autoAssemble([[
+aobscanmodule(GetC,DarkSoulsRemastered.exe,48 8B 05 xx xx xx xx 0F 28 01 66 0F 7F 80 xx xx 00 00 C6 80)
+registersymbol(GetC)
+]])
+local addr = getAddress("GetC")
+addr = addr + readInteger(addr + 3) + 7
+unregisterSymbol("BaseC")
+registerSymbol("BaseC", addr, true)
+
+{$asm}
+[DISABLE]
+unregisterSymbol(BaseB)
+unregisterSymbol(GetB)
+
+            </AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+            <ID>91489</ID>
+            <Description>"Last Bonfire"</Description>
+            <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">1002900:Depths [Entrance]
+1002950:Depths [Gaping Dragon's Room]
+1002960:Depths [Bonfire]
+1012960:Undead Burg [Pre-Dragon Scare]
+1012961:Undead Parish [Sunlight Altar Bonfire]
+1012962:Undead Burg [Bonfire]
+1012964:Undead Parish [Bonfire]
+1012965:Undead Parish [Near Boar]
+1012966:Undead Parish [Near Cell]
+1020980:Firelink Shrine [Bonfire, repeat]
+1022960:Firelink Shrine [Bonfire]
+1102960:Painted World of Ariamis [Bonfire]
+1102961:Painted World of Ariamis [Entrance]
+1202961:Darkroot Garden [Bonfire]
+1212950:Chasm of the Abyss [Manus]
+1212961:Oolacile Sanctuary [Bonfire]
+1212962:Oolacile Township [Bonfire]
+1212963:Sanctuary Garden [Bonfire]
+1212964:Oolacile Township Dungeon [Bonfire]
+1302960:The Catacombs [Bonfire #1]
+1302961:The Catacombs [Bonfire #2]
+1302962:The Catacombs [Entrance]
+1312950:The Catacombs [Nito]
+1312960:Tomb of the Giants [Bonfire #1]
+1312961:Tomb of the Giants [Bonfire #2]
+1312962:Tomb of the Giants [Entrance]
+1320980:Great Hollow [Bonfire, repeat]
+1322960:Ash Lake [Bonfire #2]
+1322961:Ash Lake [Bonfire #1]
+1322962:Great Hollow [Bonfire]
+1400980:Blighttown [Entrance, repeat]
+1402960:Quelaag's Domain [Bonfire]
+1402961:Blighttown [Swamp Bonfire]
+1402962:Blighttown [Bridge Bonfire]
+1402963:Blighttown [Entrance]
+1412950:Lost Izalith [Bed of Chaos]
+1412960:Lost Izalith [Bonfire #2]
+1412961:Demon Ruins [Bonfire #1]
+1412962:Demon Ruins [Bonfire #2]
+1412963:Demon Ruins [Bonfire #3]
+1412964:Lost Izalith [Bonfire #1]
+1502960:Sen's Fortress [Bridge, #1]
+1502961:Sen's Fortress [Bonfire]
+1502962:Sen's Fortress [Bridge, #2]
+1510980:Anor Londo [Entrance]
+1512950:Anor Londo [Gwynevere Bonfire]
+1512960:Anor Londo [Lady of the Darkling Bonfire]
+1512961:Anor Londo [Interior Bonfire]
+1512962:Anor Londo [Gwyndolin Bonfire]
+1600980:New Londo Ruins [Entrance, repeat]
+1602950:Abyss [Bonfire]
+1602951:New Londo Ruins [Entrance]
+1602960:New Londo Ruins [Pre-Ingward]
+1602961:Darkroot Basin [Bonfire]
+1702950:Crystal Cave [Seath]
+1702960:The Duke's Archives [Balcony Bonfire]
+1702961:The Duke's Archives [Cell Bonfire]
+1702962:The Duke's Archives [Elevator Bonfire]
+1802130:Kiln of the First Flame [Gwyn]
+1802960:Firelink Altar
+1802961:Kiln of the First Flame [Entrance]
+1812100:Northern Undead Asylum [Cell]
+1812900:Northern Undead Asylum [Cell, Repeat]
+1812960:Northern Undead Asylum [Bonfire #1]
+1812961:Northern Undead Asylum [Bonfire #2]
+            </DropDownList>
+            <LastState Value="1012962" RealAddress="0BBD8464"/>
+            <ShowAsSigned>1</ShowAsSigned>
+            <VariableType>4 Bytes</VariableType>
+            <Address>BaseC</Address>
+            <Offsets>
+                <Offset>B34</Offset>
+            </Offsets>
+        </CheatEntry>
+    </CheatEntries>
+</CheatTable>
