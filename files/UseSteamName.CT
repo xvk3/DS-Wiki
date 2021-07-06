@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="27">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>91489</ID>
+      <Description>"Use Steam Name"</Description>
+      <LastState Value="0" RealAddress="8849123E"/>
+      <ShowAsSigned>1</ShowAsSigned>
+      <VariableType>Byte</VariableType>
+      <Address>DarkSoulsRemastered.exe+1d278f0</Address>
+      <Offsets>
+        <Offset>3e</Offset>
+        <Offset>58</Offset>
+      </Offsets>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+</CheatTable>
