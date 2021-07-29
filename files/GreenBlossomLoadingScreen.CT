@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="27">
+  <CheatEntries>
+
+    <CheatEntry>
+      <ID>1337050849</ID>
+      <Description>"Green Blossom Loading Screen"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+{$lua}
+
+for i = 0, 61, 1
+do
+  local addr = 0x141ACE7B0 + (i * 4)
+  writeInteger(addr, 1073742084)
+end
+
+[DISABLE]
+      </AssemblerScript>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+</CheatTable>
